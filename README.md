@@ -36,7 +36,6 @@ Bootstraps a directory for new GitHub-based WordPress projects.
 The script creates a new directory and populates it with the following files and folders:
 ```
 |-- wordpress/
-|- LICENSE
 |- README.md
 |- .gitignore
 ```
