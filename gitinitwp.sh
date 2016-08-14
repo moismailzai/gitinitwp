@@ -328,7 +328,7 @@ generate_wpconfig ()
   filename="$PROJECT_DIRECTORY/wordpress/wp-config.php"
   generate_salt="< /dev/urandom tr -cd [:alnum:]-[:punct:]-[:print:] | tr -d \"\\\\'\" | head -c\${1:-64}"
   filecontents="<?php
-define('DB_NAME', 'wp-$PROJECT_NAME_PARSED');
+define('DB_NAME', 'wp_$PROJECT_NAME_PARSED');
 define('DB_USER', '$MYSQLUSERNAME');
 define('DB_PASSWORD', '$MYSQLPASS');
 define('DB_HOST', '$MYSQLHOST');
@@ -471,6 +471,8 @@ if parse_name;
     generate_wpconfig
     fix_permissions || exit 1
     git_init
+    echonicely "Please enter the root MySQL password to proceed:"
+    mysql -u $MYSQLUSERNAME -p -e "CREATE DATABASE wp_$PROJECT_NAME_PARSED" || exit 1
     echonicely ""
     echonicely "SUCCESS!"
     echonicely ""
