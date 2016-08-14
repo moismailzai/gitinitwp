@@ -119,7 +119,7 @@ WORDPRESSUNPACKCOMMAND="tar xvzf" # eg. tar xvzf
 gitinitwp.sh
 ```
 
-// calling with -p will bootstrap a project called "weareuoft" in a directory called "weareuoft" (provided the directory doesn't already exist). By default, this project directory is placed wherever the script is invoked from but you can alter the behavior by changing the "TARGET_DIRECTORY" variable to a path of your choice.
+// calling with "-p weareuoft" will bootstrap a project called "weareuoft" in a directory called "weareuoft" (provided the directory doesn't already exist). By default, this project directory is placed wherever the script is invoked from but you can alter the behavior by changing the "TARGET_DIRECTORY" variable to a path of your choice.
 
 ``` sh
 gitinitwp.sh -p weareuoft
