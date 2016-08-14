@@ -44,7 +44,7 @@ Each file is configured based on user-defined script defaults or command-line ar
 
 ## Usage:
 ```
-usage: gitinitwp [[[-a author_name] [-e author_email] [-g github_user_id] [-l local_wp_archive] [-m mysql_host] [-p project_name] [-q mysql_password] [-r remote_wp_url] [-t target_directory] [-u author_url] [-v mysql_user_id]] | [-h]]
+usage: gitinitwp.sh [[[-a author_name] [-e author_email] [-g github_user_id] [-l local_wp_archive] [-m mysql_host] [-p project_name] [-q mysql_password] [-r remote_wp_url] [-t target_directory] [-u author_url] [-v mysql_user_id]] | [-h]]
 
 
        -a author_name:      the author's name (used to attribute ownership in various files)
@@ -116,13 +116,13 @@ WORDPRESSUNPACKCOMMAND="tar xvzf" # eg. tar xvzf
 // the script assumes you've set sane defaults so simply calling it is enough to get you rolling (though you'll be asked to confirm that you want to use the current directory, and its name, as the root directory of a new project).
 
 ``` sh
-gitinitjs.wp
+gitinitwp.sh
 ```
 
 // calling with -p will bootstrap a project called "weareuoft" in a directory called "weareuoft" (provided the directory doesn't already exist). By default, this project directory is placed wherever the script is invoked from but you can alter the behavior by changing the "TARGET_DIRECTORY" variable to a path of your choice.
 
 ``` sh
-gitinitjs.wp -p weareuoft
+gitinitwp.sh -p weareuoft
 ```
 
 // you can force the script to completely override all defaults by explicitly providing each parameter:
